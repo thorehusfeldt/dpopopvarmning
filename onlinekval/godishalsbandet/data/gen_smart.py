@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#Place ans candies in one half, then place as many candies as possible in other half, as long as not getting a larger answer
+#Place ans candies in one half, then place as many candies as possible in other half, as long as the answer is unique
 
 import sys
 import random
@@ -45,7 +45,7 @@ while l+1<r:
     for i in range(mid):
         necklace[secondHalfIndex[i]] = 1
 
-    if getAns(necklace)>ans:
+    if getAns(necklace)>=ans:
         r = mid
     else:
         l = mid

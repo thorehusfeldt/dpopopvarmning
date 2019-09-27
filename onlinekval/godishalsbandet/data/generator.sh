@@ -9,10 +9,11 @@ use_solution fredrik.cpp
 
 compile gen_random.py
 compile gen_smart.py
+compile gen_specialcase.py
 compile poster.py
 
 samplegroup
-limits n=-1
+limits nMax=-1
 sample 1
 sample 2
 sample 3
@@ -50,6 +51,7 @@ tc small-smart-6 gen_smart n=1000 ans=100
 tc small-smart-7 gen_smart n=1000 ans=200
 tc small-smart-8 gen_smart n=1000 ans=450
 tc small-smart-9 gen_smart n=1000 ans=500
+tc small-special-1 gen_specialcase k=1
 
 
 group group3 40
