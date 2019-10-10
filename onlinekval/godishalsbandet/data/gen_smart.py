@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #Place ans candies in one half, then place as many candies as possible in other half, as long as the answer is unique
 
+from __future__ import print_function
 import sys
 import random
 
@@ -57,11 +58,6 @@ for i in range(l):
     necklace[secondHalfIndex[i]] = 1
 
 #rotera halsbandet slumpmässigt
-randomRotation = random.randint(0,n-1)
+randomRotation = random.randrange(n)
 necklace = necklace[randomRotation:]+necklace[:randomRotation]
-for candy in necklace:
-    if candy==1:
-        print("B",end="")
-    else:
-        print("V",end="")
-print()
+print(''.join("VB"[x] for x in necklace))

@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
-PPATH=$(realpath ..)
 . ../../../testdata_tools/gen.sh
-
-ulimit -s unlimited
 
 use_solution fredrik.cpp
 
 compile gen_random.py
-compile gen_smart.py
+compile gen_smart.py pypy
 compile gen_specialcase.py
 compile poster.py
 
