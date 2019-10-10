@@ -7,7 +7,7 @@ use_solution fredrik.cpp
 compile gen_random.py
 compile gen_smart.py pypy
 compile gen_specialcase.py
-compile poster.py
+compile gen_fixed.py
 
 samplegroup
 limits nMax=-1
@@ -17,8 +17,7 @@ sample 3
 
 group group1 20
 limits nMax=-1
-tc poster poster
-
+tc poster gen_fixed s=VBBBVVBVBBVBVVBBVV
 
 group group2 40
 limits nMax=1000
@@ -26,7 +25,12 @@ include_group group1
 tc 1
 tc 2
 tc 3
-tc small-rand-1 gen_random n=2 r=0.5
+tc small-smart-9 gen_smart n=1000 ans=500
+tc small-ans-first-half gen_fixed s=BBBVBVBBBBVVVVVVVBVV
+tc small-short-1 gen_fixed s=VB
+tc small-short-2 gen_fixed s=BV
+tc small-short-3 gen_fixed s=BB
+tc small-short-4 gen_fixed s=VV
 tc small-rand-2 gen_random n=10 r=0
 tc small-rand-3 gen_random n=10 r=0.5
 tc small-rand-4 gen_random n=10 r=1
@@ -47,8 +51,6 @@ tc small-smart-5 gen_smart n=1000 ans=10
 tc small-smart-6 gen_smart n=1000 ans=100
 tc small-smart-7 gen_smart n=1000 ans=200
 tc small-smart-8 gen_smart n=1000 ans=450
-tc small-smart-9 gen_smart n=1000 ans=500
-tc small-special-1 gen_specialcase k=1
 
 
 group group3 40
