@@ -6,7 +6,6 @@ use_solution fredrik.cpp
 
 compile gen_random.py
 compile gen_smart.py pypy
-compile gen_specialcase.py
 compile gen_fixed.py
 
 samplegroup
