@@ -1,21 +1,22 @@
 \problemname{Godishalsbandet}
 Alice vill dela ett godishalsband med Bob.
 Halsbandet består av vita och blåa godisar.
-För att vara rättvis vill Alice dela halsbandet med
-två klipp i två halvor med lika många godisbitar i varje.
+För att vara rättvis vill Alice dela halsbandet i två
+delar med lika många godisbitar i varje.
+Hon får bara dela halsbandet i två delar.
 Dock gillar Alice de blåa godisarna mycket mer än de vita.
 
-Vad är det största antalet blåa godisbitar Alice kan få i sin del,
+Vad är det största antalet blåa godisar Alice kan få i sin del,
 om hon klipper halsbandet optimalt?
 
 \section*{Indata}
 Indatan består av en rad med en sträng som beskriver halsbandet.
 Strängen består endast av bokstäverna \texttt{B} och \texttt{V},
-och har totalt ett jämt antal bokstäver.
+och har totalt ett jämnt antal bokstäver.
 
 \section*{Utdata}
-Skriv ut en rad med ett heltal, det maximala antalet blå godisar Alice
-kan få i sin halva av halsbandet.
+Skriv ut en rad med ett heltal, det maximala antalet blåa godisar Alice
+kan få i sin del av halsbandet.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper.
@@ -30,4 +31,7 @@ $2$   & $40$       & Halsbandet består av högst $1\,000$ godisar\\ \hline
 $3$   & $40$       & Halsbandet består av högst $1\,000\,000$ godisar \\ \hline
 \end{tabular}
 
-\section*{Förklaring av exempelfall}
+\section*{Förklaring av exempelfall 1}
+BBVVBVVVBB har längd 10 så Alice måste dela halsbandet i två delar med 5 godisar i varje.
+De möjliga delarna hon kan få är BBVVB, BVVBV, VVBVV, VBVVV, BVVVB, VVVBB, VVBBB, VBBBB, BBBBV, BBBVV.
+Hon får mest blåa godisar genom att välja VBBBB eller BBBBV som har $4$ blåa godisar.
