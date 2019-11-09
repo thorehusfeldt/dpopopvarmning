@@ -7,6 +7,7 @@ int hitta(int m, int n) {  //Hittar närmsta gemensamma anfader till m och n.
   for(;m>0;m=p[m])   //Gå uppåt från ena personen.
      for(k=n;k>0;k=p[k])    //Gå uppåt från andra personen.
         if(k==m) return k;     //Ta första bästa.
+  return 0;
 }
 
 
