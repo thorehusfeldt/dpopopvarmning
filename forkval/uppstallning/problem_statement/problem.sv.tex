@@ -1,5 +1,4 @@
 \problemname{Uppställning}
-% TODO: \includegraphics{uppstallning.png}
 En grupp med n barn, låt oss kalla dem A, B, C och så vidare, beslutar sig för att testa din tankeförmåga.
 Utan att du ser dem ställer de upp sig på en rad.
 Sen räknar vart och en av dem hur många av de barn som står till vänster som är längre än hen själv, och sedan likadant med dem som står till höger.
@@ -12,15 +11,24 @@ B har tre längre barn till vänster om sig och ett till höger.
 C har ett längre barn till vänster om sig men inget till höger och så vidare.
 Informationen på lapparna kan sammanfattas så här:
 
-\begin{tabular}{|c|c|c|}
-\hline
-  Barn&Vänster&Höger6\\\hline
-  A&1&2\\
-  B&3&1\\
-  C&1&0\\
-  D&0&0\\
-  E&2&0\\\hline
-\end{tabular}
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}{}
+    \begin{tabular}[b]{|c|c|c|}
+    \hline
+      Barn&Vänster&Höger\\\hline
+      A&1&2\\
+      B&3&1\\
+      C&1&0\\
+      D&0&0\\
+      E&2&0\\\hline
+    \end{tabular}
+  \end{subfigure}
+  \hspace{2cm}
+  \begin{subfigure}{}
+    \includegraphics[scale=0.4]{uppstallning}
+  \end{subfigure}
+\end{figure}
 
 Tyvärr klarade du inte nöten utan måste i hemlighet smyga iväg och skriva ett datorprogram som löser uppgiften.
 För att underlätta för dig själv nästa gång barnen ansätter dig så vill du kunna variera både antalet barn (mellan 3 och 8, inklusive) och informationen på lapparna.
