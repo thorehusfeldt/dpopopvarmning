@@ -12,9 +12,13 @@ def cmdlinearg(name, default=None):
 
 seed = int(cmdlinearg('seed', sys.argv[-1]))
 n = int(cmdlinearg('n'))
-r = int(cmdlinearg('r'))
 
 random.seed(seed)
 
+def r():
+    m = 10**6 - 1
+    return random.randint(-m, m)
+
 print(n)
-print(*[random.randint(1, r) for _ in range(n)])
+for i in range(n):
+    print(r(), r(), r(), r())
