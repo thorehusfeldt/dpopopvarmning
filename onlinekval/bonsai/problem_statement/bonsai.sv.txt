@@ -1,11 +1,4 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-
-\title{Bonsai}
-\author{mattias.akke }
-\date{November 2019}
-
-\begin{document}
+\problemname{Bonsai}
 Många gillar att odla bonsaiträd för att de säger att det är "svårt" och "harmoniskt". Det är inte därför Torstina odlar bonsaiträd. Hon vill bara sälja dem och tjäna massa pengar så att hon kan köpa massa kirimojor. Hon har precis planterat en ny knöl och är väldigt sugen på kirimojor. Hon undrar därför hur många år hon måste vänta innan hon har ett bonsaiträd som hennes kund önskar.
 
 Bonsaiträd har $2\leq N \leq 10^5$ knölar och $N-1$ grenar. Knölarna är numrerade från 0 till $N-1$. Alla bonsaiträd börjar med en liten knöl som man stoppar ner i jorden. Varje år växer det ut en ny gren från varje knöl och i dess ände bildas en ny knöl. Man kan också klippa av grenar från trädet när som helst. Hon påminner dig om att det inte spelar någon roll var roten sitter i trädet. 
@@ -28,12 +21,18 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-1     & ?         &  $m_i\leq 2$.\\ \hline
-2     & ?         &  $N \leq 100$. \\ \hline
-3     & ?         &  $m_i \leq 3$. \\ \hline
-4     & ?          &  $A \leq 15$. \\ \hline
-5     & ?          &  Inga ytterligare begränsningar. \\ \hline
+1     & 14         &  $m_i\leq 2$.\\ \hline
+2     & 26         &  $N \leq 100$. \\ \hline
+3     & 30         &  $m_i \leq 3$. \\ \hline
+4     & 15          &  $A \leq 15$. \\ \hline
+5     & 15          &  Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
-\section*{Förklaring av sample}
-\end{document}
+\section*{Förklaring av exempelfall 1}
+Vi kan odla trädet på 2 år om vi låter det växa enligt bilden nedan. 
+
+\begin{figure}[h]
+	\centering
+\includegraphics[width=0.5\textwidth]{Bonsai_tree}
+\caption{Ett av de två sätten man kan odla bonsaiträdet i sample 1 på två år.}
+\end{figure}

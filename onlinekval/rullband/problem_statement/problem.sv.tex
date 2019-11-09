@@ -1,13 +1,13 @@
-\problemname{Glasspelet}
+\problemname{Rullband}
 Det svenska laget till Internationella Programmeringsolympiaden har just landat i Singapore för att
 tävla i \href{https://ioi2020.sg/}{IOI 2020}.
 På vägen till bagageupphämtningen ska de genom en lång korridor med massa rullband.
 Korridoren är $M$ meter lång, och laget står just nu i början av den och funderar på
 hur snabbt de kan ta sig till bagageupphämtningen.
 Det finns $N$ \href{https://sv.wikipedia.org/wiki/Rullande_trottoar}{rullband} i korridoren.
-Varje rullband börjar på ett visst avstånd från början av korridorn.
+Varje rullband börjar på ett visst avstånd från början av korridoren,
 slutar på ett visst avstånd från början av korridoren och tar en viss tid att åka längs.
-Alla rullband går i korridorens riktning, och man kan endast gå på ett rullband i början av det och endast kliva av vid slutet av det.
+Alla rullband går i korridorens riktning, och man kan endast kliva på ett rullband i början av det och endast kliva av vid slutet av det.
 När laget inte går på något rullband tar det $g$ sekunder att gå en meter.
 Korridoren och rullbanden är så pass smala att endast tiden det tar att gå
 parallellt med korridoren spelar roll. 
@@ -22,15 +22,13 @@ korridoren.
 \section*{Indata}
 Den första raden innehåller tre heltal $N$, $M$, $g$ ($1 \le N \le 2 \times 10^5$,$2 \le N \le 2 \times 10^5$, $1 \le g \le 100$):
 antal rullband, längden på korridoren i meter, och lagets gånghastighet i sekunder per meter.
-De följande $N$ raderna beskriver rullbanden och innehåller 3 heltal vardera: $s_i, e_i$ och $v_i$
-($1\leq s_i \leq e_i\leq M,1\leq t_i\leq100$).
-$s_i$ är antal meter från början av korridoren som rullbandet börjar, $e_i$ är antal meter
-från början som rullbandet slutar och $t_i$ är hur lång tid det tar från att man går på
-rullbandet till att man har kommit till slutet av det.
+De följande $N$ raderna beskriver rullbanden och innehåller 3 heltal vardera: $s_i, e_i$ och $t_i$
+($1\leq s_i,e_i\leq M,1\leq t_i\leq100$).
+$s_i$ är antal meter från början av korridoren till rullbandets början, $e_i$ är antal meter
+från början av korridoren till rullbandets slut och $t_i$ är hur lång tid det tar från att man går på
 
 \section*{Utdata}
 Skriv ut en rad med ett heltal: antal sekunder det tar för laget att komma genom korridoren.
-Ditt svar kommer bedömmas som korrekt om det är inom ett absolut eller relativt fel på $10^{-6}$ från domarnas svar.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper.
