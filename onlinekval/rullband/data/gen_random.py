@@ -19,14 +19,20 @@ def main():
     g = random.randint(1,1e2)
     MAX_SPEED = 1e2
 
-    band = [[random.randint(0,m-1),random.randint(0,m-1),random.randint(1,MAX_SPEED)] for _ in range(n)]
+    band = []
 
+    for i in range(n):
+        a=0
+        b=0
+        while True:
+            a = random.randint(0,m-1)
+            b = random.randint(0,m-1)
+            if a!=b:
+                break
+        band.append([min(a,b),max(a,b),random.randint(1,MAX_SPEED)])
 
     if onlyForward:
 
-        for i in range(len(band)):
-            if band[i][0]>band[i][1]:
-                (band[i][0],band[i][1]) = (band[i][1],band[i][0])
 
         dn = 1
         up = len(band)
@@ -39,18 +45,6 @@ def main():
                 up = mid
         band = band[:dn]
         #assert(solve(n,m,g,band,onlyForward=True)==solve(n,m,g,band))
-
-        extraBackwards = [[random.randint(0,m-1),random.randint(0,m-1),random.randint(1,MAX_SPEED)] for _ in range(n-len(band))]
-        dn = 0
-        up = len(extraBackwards)
-        #print(len(band))
-        while dn+1<up:#binärsök efter minsta antalet band att ta bort så att det räcker att bara gå framåt
-            mid = (dn+up)//2
-            if solve(n,m,g,band+extraBackwards[:mid],onlyForward=True)==solve(n,m,g,band+extraBackwards[:mid]):
-                dn = mid
-            else:
-                up = mid
-        band = band+extraBackwards[:dn]
 
         #assert(solve(n,m,g,band,onlyForward=True)==solve(n,m,g,band))
 

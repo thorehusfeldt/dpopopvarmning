@@ -65,7 +65,7 @@ void run() {
 		ll a,b,t;
 		a = Int(1,m);
     	Space();
-		b = Int(1,m);
+		b = Int(a+1,m);
     	Space();
 		t = Int(1,MAX_TIME);
 		Endl();
