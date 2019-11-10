@@ -16,7 +16,7 @@ void run() {
 	}
 	assert((int)names.size() == n);
 
-	int m = Int(1, 5050);
+	int m = Int(1, 4950);
 	Endl();
 	set<pair<string, string>> pairs;
 	for (int i = 0; i < m; i++) {
