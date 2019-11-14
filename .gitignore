@@ -2,7 +2,8 @@
 *.out
 *.log
 *.gch
-**/data/secret/
+onlinekval/**/data/secret/
+warmup/**/data/secret/
 *.DS_Store
 *.bcf
 *.xml
