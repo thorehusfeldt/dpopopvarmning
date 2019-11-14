@@ -1,7 +1,7 @@
 #include "validator.h"
 
 void run() {
-	int n = Int(1, 100);
+	int n = Int(2, 100);
 	Endl();
 	set<string> names;
 	for (int i = 0; i < n; i++) {
