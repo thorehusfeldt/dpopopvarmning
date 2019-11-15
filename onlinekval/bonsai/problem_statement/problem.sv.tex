@@ -6,7 +6,7 @@ Bonsaiträd har $2\leq N \leq 10^5$ knölar och $N-1$ grenar. Knölarna är numr
 Givet bonsaiträdet kunden önskar, hur många år måste Torstina vänta innan hon har odlat ett exakt likadant träd?
 
 \section*{Indata}
-Den första raden innehåller ett heltal $N\geq 2$, antalet knölar i kundens bonsaiträd.
+Den första raden innehåller ett heltal $2 \leq N \leq 10^5$, antalet knölar i kundens bonsaiträd.
 De följande $N$ raderna beskriver bonsaiträdet enligt följande:
 På rad $i$ står först ett heltal $0 < m_i < n$, antalet grenar som går ut från knöl $i$. Därefter följer $m_i$ heltal, knölarna som sitter ihop med knöl $i$. 
 
@@ -21,11 +21,12 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-1     & 14         &  $m_i\leq 2$.\\ \hline
-2     & 26         &  $N \leq 100$. \\ \hline
-3     & 30         &  $m_i \leq 3$. \\ \hline
-4     & 15          &  $A \leq 15$. \\ \hline
-5     & 15          &  Inga ytterligare begränsningar. \\ \hline
+1     & 9        &  $m_i\leq 2$, det är bäst att börja odla trädet i nod 0.\\ \hline
+2     & 11         &  $m_i \leq 3$, det är bäst att börja odla trädet i nod 0. \\ \hline
+3     & 18         & $A \leq 15$, det är bäst att börja odla trädet i nod 0. \\ \hline
+4     & 22          & Det är bäst att börja odla trädet i nod 0. \\ \hline
+5     & 12          &  $N \leq 250$. \\ \hline
+6     & 28          &  Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempelfall 1}
