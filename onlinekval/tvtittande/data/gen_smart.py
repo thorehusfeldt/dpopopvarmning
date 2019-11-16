@@ -22,6 +22,7 @@ assert n <= days
 assert maxcsum >= n
 assert ans == 'Ja' or ans == 'Nej'
 assert k <= (days+1-n)*10
+assert not (n == 1 and k == 1 and days == 100000 and ans == 'Nej')
 
 random.seed(seed)
 
@@ -38,6 +39,18 @@ for i in mustuse: usehours[i] = 1
 for i in range(k-1-len(mustuse)):
     p = random.randint(0, n-1)
     usehours[p] = 1
+
+hours = 0
+prevday = -1
+for i in range(n):
+    while(events[i] <= prevday): events[i]+=1
+    hours += 10*(events[i]-prevday-1)
+    hours -= usehours[i]
+    if(hours < 0):
+        events[i] += 1
+        hours += 10
+    prevday = events[i]
+assert events[-1] == days
 
 rem = 0
 hours = 0
@@ -65,6 +78,19 @@ for i in range(n):
     while(usehours[i] > 1 and rem > 0):
         rem -= 1
         usehours[i] -= 1
+assert rem == 0
+
+if(ans == 'Nej'):
+    prevday = -1
+    hours = 0
+    failday = random.randint(0, n-1)
+    while(usehours[failday] == 0): failday = random.randint(0, n-1)
+    for i in range(n):
+        hours += 10*(events[i]-prevday-1)
+        prevday = events[i]
+        if(i == failday):
+            usehours[i] = hours + random.randint(1, 2)
+        hours -= usehours[i]
 
 nonzero = []
 for i in range(n):
@@ -80,15 +106,10 @@ for i in range(k-t):
     p = random.randint(0,len(nonzero)-1)
     d[nonzero[p]] += 1
 
-hours = 0
 extra = 0
-prevday = -1
 for i in range(n):
     if(usehours[i] == 0):
-        hours -= 10
         continue
-    hours += 10*(events[i]-prevday-1)
-    prevday = events[i]
     d[i] += extra
     extra = 0
     if(d[i] > usehours[i]):
@@ -121,8 +142,6 @@ for i in range(n):
     o += d[i]
 
 lengths = []
-hours = 0
-prevday = -1
 serier = []
 for i in range(n):
     assert d[i] <= usehours[i]
