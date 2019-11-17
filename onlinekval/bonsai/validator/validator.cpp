@@ -65,11 +65,12 @@ int solve(vii tree){
             if(bt[tree[node][i]] == 1) q.push({steps[tree[node][i]], tree[node][i]});
         }
     }
-    return(steps[last]);
+    return((steps[last], steps[last]==steps[0]));
 }
 
 void run(){
     int restr = Arg("restr")
+    int rooted = Arg("rooted")
     int n = INT(1,Arg("n"));
     Endl();
     vii tree;
@@ -81,7 +82,7 @@ void run(){
         Space();
         ms += m;
         if (restr == 2) assert(m <= 2); //assert group 1
-        if (restr == 3) assert(m <= 3); //assert group 3
+        if (restr == 3) assert(m <= 3); //assert group 2
         vi neigh;
         rep(j,0,m){
             int a = INT(0,n);
@@ -95,5 +96,9 @@ void run(){
     }
     assert(n-1 == ms / 2); //assert tree
     assert(count() == 1); //assert one component
-    if (restr == 15) assert(solve(tree) <= 15)); //assert group 4
+    if rooted{
+        sol = solve(tree);
+        assert(sol.second == true); //assert that the root is a solution
+        if (restr == 15) assert(sol.first <= 15)); //assert group 3
+    }
 }
