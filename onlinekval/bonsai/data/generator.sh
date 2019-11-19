@@ -1,6 +1,9 @@
 #!/bin/bash
 
-use_solution Bonsai_sol.cpp
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution MA.cpp
 
 compile gen_BIG.py
 compile gen_speedy.py
@@ -11,23 +14,21 @@ limits n=10
 sample 1
 sample 2
 sample 3
-sample 4
-sample 5
 
 group group1 9
 limits n=100000 restr=2 rooted=1
 tc 1
-tc simple-small1 gen_BIG n=10 mode=line rooted = 1
-tc simple-small2 gen_BIG n=11 mode=line rooted = 1
-tc simple-med1 gen_BIG n=9999 mode=line rooted = 1
-tc simple-med2 gen_BIG n=1000 mode=line rooted = 1
-tc simple-med3 gen_BIG n=1001 mode=line rooted = 1
-tc simple-med4 gen_BIG n=1002 mode=line rooted = 1
-tc simple-BIG1 gen_BIG n=99999 mode=line rooted = 1
-tc simple-BIG2 gen_BIG n=100000 mode=line rooted = 1
+tc simple-small1 gen_BIG n=10 mode=line rooted=1
+tc simple-small2 gen_BIG n=11 mode=line rooted=1
+tc simple-med1 gen_BIG n=9999 mode=line rooted=1
+tc simple-med2 gen_BIG n=1000 mode=line rooted=1
+tc simple-med3 gen_BIG n=1001 mode=line rooted=1
+tc simple-med4 gen_BIG n=1002 mode=line rooted=1
+tc simple-BIG1 gen_BIG n=99999 mode=line rooted=1
+tc simple-BIG2 gen_BIG n=100000 mode=line rooted=1
 
 group group2 11
-limit n=100000 restr=3 rooted=1
+limits n=100000 restr=3 rooted=1
 include_group group1
 tc 2
 tc tall1 gen_tall n=11 rooted=1
@@ -44,25 +45,25 @@ tc tall11 gen_tall n=34567 rooted=1
 tc tall12 gen_tall n=98766 rooted=1
 
 group group3 18
-limit n=100000 restr=15 rooted=1
+limits n=100000 restr=15 rooted=1
 tc 1
 tc 2
 tc 3
-tc speedy1 gen_speedy n=11 rooted=1
-tc speedy2 gen_speedy n=12 rooted=1
-tc speedy3 gen_speedy n=1001 rooted=1
-tc speedy4 gen_speedy n=1000 rooted=1
-tc speedy5 gen_speedy n=10001 rooted=1
-tc speedy6 gen_speedy n=10000 rooted=1
-tc speedy7 gen_speedy n=100000 rooted=1
-tc speedy8 gen_speedy n=100000 rooted=1
-tc speedy9 gen_speedy n=100000 rooted=1
-tc speedy10 gen_speedy n=45678 rooted=1
-tc speedy11 gen_speedy n=34567 rooted=1
-tc speedy12 gen_speedy n=98766 rooted=1
+#tc speedy1 gen_speedy n=11 rooted=1
+#tc speedy2 gen_speedy n=12 rooted=1
+#tc speedy3 gen_speedy n=1001 rooted=1
+#tc speedy4 gen_speedy n=1000 rooted=1
+#tc speedy5 gen_speedy n=10001 rooted=1
+#tc speedy6 gen_speedy n=10000 rooted=1
+#tc speedy7 gen_speedy n=100000 rooted=1
+#tc speedy8 gen_speedy n=100000 rooted=1
+#tc speedy9 gen_speedy n=100000 rooted=1
+#tc speedy10 gen_speedy n=45678 rooted=1
+#tc speedy11 gen_speedy n=34567 rooted=1
+#tc speedy12 gen_speedy n=98766 rooted=1
 
 group group4 22
-limit n=100000 rooted=1
+limits n=100000 rooted=1
 include_group group2
 include_group group3
 include_group group4
@@ -87,7 +88,7 @@ tc RBIG-deeper5 gen_BIG n=100000 mode=deeper rooted=1
 tc RBIG-deeper6 gen_BIG n=100000 mode=deeper rooted=1
 
 group group5 12
-limit n = 250 rooted=0
+limits n=1000 rooted=0
 tc 3
 tc small-random1 gen_BIG n=50 mode=random rooted=0
 tc small-random2 gen_BIG n=510 mode=random rooted=0
@@ -109,7 +110,7 @@ tc small-deeper5 gen_BIG n=1000 mode=deeper rooted=0
 tc small-deeper6 gen_BIG n=1000 mode=deeper rooted=0
 
 group group6 28
-limit n=100000 rooted=0
+limits n=100000 rooted=0
 include_group group2
 include_group group3
 include_group group4
@@ -126,7 +127,7 @@ tc BIG-deep1 gen_BIG n=50000 mode=deep rooted=0
 tc BIG-deep2 gen_BIG n=99000 mode=deep rooted=0
 tc BIG-deep3 gen_BIG n=100000 mode=deep rooted=0
 tc BIG-deep4 gen_BIG n=100000 mode=deep rooted=0
-tc BIG-deeper1 gen_BIG n=50000 mode=deepe rooted=0
+tc BIG-deeper1 gen_BIG n=50000 mode=deeper rooted=0
 tc BIG-deeper2 gen_BIG n=51000 mode=deeper rooted=0
 tc BIG-deeper3 gen_BIG n=99000 mode=deeper  rooted=0
 tc BIG-deeper4 gen_BIG n=99000 mode=deeper rooted=0

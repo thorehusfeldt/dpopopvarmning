@@ -1,8 +1,8 @@
 #include "validator.h"
 typedef long long ll;
 typedef long double ld;
-typedef vector<ll> vi;
-typedef vector< vector<ll> > vii;
+typedef vector<int> vi;
+typedef vector< vector<int> > vii;
 #define rep(i, a, b) for(int i = a; i < b; i++)
 #define all(a) a.begin(),a.end()
 #define sz(a) (ll) (a).size()
@@ -69,36 +69,34 @@ int solve(vii tree){
 }
 
 void run(){
-    int restr = Arg("restr")
-    int rooted = Arg("rooted")
-    int n = INT(1,Arg("n"));
+    int restr = Arg("restr", 0);
+    int rooted = Arg("rooted", 0);
+    int n = Int(1,Arg("n"));
     Endl();
-    vii tree;
-    UF(n);
+    vector<vector<int>> tree;
+    UF uf(n);
     int ms = 0;
     rep(i,0,n){
         vi branches;
-        int m = INT(1,n); //Blir detta typ-> cin >> m; assert(m > 0);   ?
+        int m = Int(1,n); //Blir detta typ-> cin >> m; assert(m > 0);   ?
         Space();
         ms += m;
         if (restr == 2) assert(m <= 2); //assert group 1
         if (restr == 3) assert(m <= 3); //assert group 2
-        vi neigh;
+        vector<int> a = SpacedInts(m, 0, n);
         rep(j,0,m){
-            int a = INT(0,n);
-            Space();
-            assert(a != j);
-            merge(j, a);
-            neigh.pb(a);
+            assert(a[j] != i);
+            uf.merge(i, a[j]);
         }
-        Endl();
-        tree.pb(neigh);
+        tree.pb(a);
     }
     assert(n-1 == ms / 2); //assert tree
-    assert(count() == 1); //assert one component
-    if rooted{
-        sol = solve(tree);
-        assert(sol.second == true); //assert that the root is a solution
-        if (restr == 15) assert(sol.first <= 15)); //assert group 3
+    assert(uf.count() == 1); //assert one component
+    if (rooted) {
+        auto sol = solve(tree);
+        //assert(sol == 0); //assert that the root is a solution
+        if (restr == 15) {
+            assert(sol <= 15); //assert group 3
+        }
     }
 }
