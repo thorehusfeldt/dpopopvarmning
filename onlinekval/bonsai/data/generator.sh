@@ -48,7 +48,6 @@ group group3 18
 limits n=100000 restr=15 rooted=1
 tc 1
 tc 2
-tc 3
 #tc speedy1 gen_speedy n=11 rooted=1
 #tc speedy2 gen_speedy n=12 rooted=1
 #tc speedy3 gen_speedy n=1001 rooted=1
@@ -88,26 +87,26 @@ tc RBIG-deeper5 gen_BIG n=100000 mode=deeper rooted=1
 tc RBIG-deeper6 gen_BIG n=100000 mode=deeper rooted=1
 
 group group5 12
-limits n=1000 rooted=0
+limits n=250 rooted=0
 tc 3
 tc small-random1 gen_BIG n=50 mode=random rooted=0
-tc small-random2 gen_BIG n=510 mode=random rooted=0
+tc small-random2 gen_BIG n=51 mode=random rooted=0
 tc small-random3 gen_BIG n=99 mode=random rooted=0
-tc small-random4 gen_BIG n=990 mode=random rooted=0
+tc small-random4 gen_BIG n=99 mode=random rooted=0
 tc small-random5 gen_BIG n=100 mode=random rooted=0
-tc small-random6 gen_BIG n=1000 mode=random rooted=0
-tc small-star1 gen_BIG n=510 mode=star rooted=0
-tc small-star2 gen_BIG n=1000 mode=star rooted=0
-tc small-deep1 gen_BIG n=500 mode=deep rooted=0
-tc small-deep2 gen_BIG n=990 mode=deep rooted=0
-tc small-deep3 gen_BIG n=1000 mode=deep rooted=0
-tc small-deep4 gen_BIG n=1000 mode=deep rooted=0
-tc small-deeper1 gen_BIG n=500 mode=deeper rooted=0
-tc small-deeper2 gen_BIG n=510 mode=deeper rooted=0
-tc small-deeper3 gen_BIG n=990 mode=deeper rooted=0
-tc small-deeper4 gen_BIG n=990 mode=deeper rooted=0
-tc small-deeper5 gen_BIG n=1000 mode=deeper rooted=0
-tc small-deeper6 gen_BIG n=1000 mode=deeper rooted=0
+tc small-random6 gen_BIG n=100 mode=random rooted=0
+tc small-star1 gen_BIG n=51 mode=star rooted=0
+tc small-star2 gen_BIG n=100 mode=star rooted=0
+tc small-deep1 gen_BIG n=50 mode=deep rooted=0
+tc small-deep2 gen_BIG n=99 mode=deep rooted=0
+tc small-deep3 gen_BIG n=250 mode=deep rooted=0
+tc small-deep4 gen_BIG n=250 mode=deep rooted=0
+tc small-deeper1 gen_BIG n=250 mode=deeper rooted=0
+tc small-deeper2 gen_BIG n=250 mode=deeper rooted=0
+tc small-deeper3 gen_BIG n=250 mode=deeper rooted=0
+tc small-deeper4 gen_BIG n=250 mode=deeper rooted=0
+tc small-deeper5 gen_BIG n=250 mode=deeper rooted=0
+tc small-deeper6 gen_BIG n=250 mode=deeper rooted=0
 
 group group6 28
 limits n=100000 rooted=0
