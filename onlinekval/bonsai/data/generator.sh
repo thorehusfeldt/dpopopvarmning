@@ -6,7 +6,7 @@ PPATH=$(realpath ..)
 use_solution MA.cpp
 
 compile gen_BIG.py
-compile gen_speedy.py
+compile gen_small_ans.py
 compile gen_tall.py
 
 samplegroup
@@ -48,18 +48,18 @@ group group3 18
 limits n=100000 restr=15 rooted=1
 tc 1
 tc 2
-#tc speedy1 gen_speedy n=11 rooted=1
-#tc speedy2 gen_speedy n=12 rooted=1
-#tc speedy3 gen_speedy n=1001 rooted=1
-#tc speedy4 gen_speedy n=1000 rooted=1
-#tc speedy5 gen_speedy n=10001 rooted=1
-#tc speedy6 gen_speedy n=10000 rooted=1
-#tc speedy7 gen_speedy n=100000 rooted=1
-#tc speedy8 gen_speedy n=100000 rooted=1
-#tc speedy9 gen_speedy n=100000 rooted=1
-#tc speedy10 gen_speedy n=45678 rooted=1
-#tc speedy11 gen_speedy n=34567 rooted=1
-#tc speedy12 gen_speedy n=98766 rooted=1
+tc small_ans1 gen_small_ans maxt=9
+tc small_ans2 gen_small_ans maxt=5
+tc small_ans3 gen_small_ans maxt=14
+tc small_ans4 gen_small_ans maxt=11
+tc small_ans5 gen_small_ans maxt=13
+tc small_ans6 gen_small_ans maxt=15
+tc small_ans7 gen_small_ans maxt=15
+tc small_ans8 gen_small_ans maxt=15
+tc small_ans9 gen_small_ans maxt=15
+tc small_ans10 gen_small_ans maxt=12
+tc small_ans11 gen_small_ans maxt=13
+tc small_ans12 gen_small_ans maxt=14
 
 group group4 22
 limits n=100000 rooted=1
