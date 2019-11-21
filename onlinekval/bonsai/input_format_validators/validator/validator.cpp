@@ -1,8 +1,7 @@
 #include "validator.h"
+#include <set>
 typedef long long ll;
 typedef long double ld;
-typedef vector<int> vi;
-typedef vector< vector<int> > vii;
 #define rep(i, a, b) for(int i = a; i < b; i++)
 #define all(a) a.begin(),a.end()
 #define sz(a) (ll) (a).size()
@@ -10,23 +9,12 @@ typedef vector< vector<int> > vii;
 const ll inf = 90000000000;
 const ll mod = 1000000009;
 
-//input format
-//n
-//m_0 a_0 a_2 ... a_m0
-// .
-// .
-// .
-//m_n ...
-
-class UF {
-  int *id, cnt, *sz;
-  public:
-
+struct UF {
+    int *id, cnt, *sz;
     UF(int N) {
         cnt = N; id = new int[N]; sz = new int[N];
         for (int i = 0; i<N; i++)  id[i] = i, sz[i] = 1; }
     ~UF() { delete[] id; delete[] sz; }
-
 
     int find(int p) {
         int root = p;
@@ -45,10 +33,10 @@ class UF {
     int count() { return cnt; }
 };
 
-int solve(vii tree){
+int solve(vector<vector<int>>& tree){
     int n = sz(tree);
     priority_queue<pair<ll,ll>, vector<pair<ll,ll>>, greater<pair<ll,ll>>> q;
-    vi steps, bt;
+    vector<int> steps, bt;
     rep(i,0,n){
         ll m = sz(tree[i]);
         if (m == 1) q.push({0,i});
@@ -65,7 +53,21 @@ int solve(vii tree){
             if(bt[tree[node][i]] == 1) q.push({steps[tree[node][i]], tree[node][i]});
         }
     }
-    return((steps[last], steps[last]==steps[0]));
+    return steps[last];
+}
+
+int solveFrom(vector<vector<int>>& tree, int node, int par) {
+    vector<int> childDelay;
+    for (int child : tree[node]) {
+        if (child == par)
+            continue;
+        childDelay.push_back(solveFrom(tree, child, node));
+    }
+    sort(childDelay.begin(), childDelay.end(), greater<>());
+    int ans = 0;
+    for (int i = 0; i < (int)childDelay.size(); i++)
+        ans = max(ans, childDelay[i] + i + 1);
+    return ans;
 }
 
 void run(){
@@ -76,9 +78,10 @@ void run(){
     vector<vector<int>> tree;
     UF uf(n);
     int ms = 0;
+    set<pair<int, int>> seenEdges;
     rep(i,0,n){
-        vi branches;
-        int m = Int(1,n); //Blir detta typ-> cin >> m; assert(m > 0);   ?
+        vector<int> branches;
+        int m = Int(1,n);
         Space();
         ms += m;
         if (restr == 2) assert(m <= 2); //assert group 1
@@ -86,17 +89,21 @@ void run(){
         vector<int> a = SpacedInts(m, 0, n);
         rep(j,0,m){
             assert(a[j] != i);
-            uf.merge(i, a[j]);
+            int e1 = max(a[j], i), e2 = min(a[j], i);
+            if (seenEdges.insert(make_pair(e1, e2)).second) {
+                assert(uf.find(e1) != uf.find(e2));
+                uf.merge(e1, e2);
+            }
         }
         tree.pb(a);
     }
     assert(n-1 == ms / 2); //assert tree
     assert(uf.count() == 1); //assert one component
+    int sol = solve(tree);
     if (rooted) {
-        auto sol = solve(tree);
-        //assert(sol == 0); //assert that the root is a solution
-        if (restr == 15) {
-            assert(sol <= 15); //assert group 3
-        }
+        assert(solveFrom(tree, 0, -1) == sol); //assert that the root is a solution
+    }
+    if (restr == 15) {
+        assert(sol <= 15); //assert group 3
     }
 }
