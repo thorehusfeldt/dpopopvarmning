@@ -96,18 +96,16 @@ Svar: 7
 \specialsection*{Uppgift 2 -- Tebryggning}
 
 Egon ska brygga massor av te till $N$ programmeringsolympiadsdeltagare.
-Han har $K$ påsar te och alla påsar är av olika sorter.
+Han har $K$ påsar te, alla av olika sorter.
 Påse $i$ räcker till $x_i$ personer. Det är garanterat att påsarna sammanlagt räcker till minst $N$ personer.
 
 Egon tänker använda bryggkannor som har plats för te till maximalt 10 personer.
-Eftersom alla påsar är av olika sort
-går det inte att använda flera påsar i samma kanna.
-Dock kan samma påse användas till flera kannor. Hur många kannor måste Egon brygga?
+Eftersom påsarna är av olika sort
+går det inte att blanda flera påsar i samma kanna.
+Dock kan samma påse användas till flera kannor. Hur många kannor måste Egon använda?
 
-Programmet ska läsa in två heltal $1 \le K \le 10$ och $1 \le N \le 100$ 
- -- antalet tepåsar Egon har och antalet programmeringsolympiadsdeltagare. 
-Sedan ska det läsa in $K$ heltal $1 \le x_1, x_2, \dots, x_K \le 100$,
-antal personer som varje påse räcker till. Programmet ska skriva ut ett heltal: det minsta antalet tekannor Egon måste brygga. 
+Programmet ska fråga efter antalet tepåsar $K$ och antalet programmeringsolympiadsdeltagare $N$, där $1 \le K \le 10$ och $1 \le N \le 100$. 
+Sedan ska det läsa in $K$ heltal $x_1, x_2, \dots, x_K$, antal personer som varje påse räcker till ($1 \le x_i \le 100$). Programmet ska skriva ut ett heltal: det minsta antalet tekannor Egon måste använda. 
 
 \fe{Poängsättning:}\\
 För testfall värda $1$ poäng gäller att $K=1$. \\
@@ -116,7 +114,7 @@ För de resterande testfallen (värda $4$ poäng) gäller att $1\leq N\leq 100$ 
 \fe{Körningsexempel 1}
 \begin{verbatim}
 Antal påsar ? 3
-Antal personer ?
+Antal personer ? 36
 Påse 1 räcker till ? 23
 Påse 2 räcker till ? 5
 Påse 3 räcker till ? 17
@@ -218,7 +216,7 @@ har en höjd mellan 0 och 9.
 Ett mätinstrument på sonden har lyckats mäta den specifika höjden
 på vissa, men inte alla, rutor. Utifrån den kemiska sammansättningen i ytan vet vi att det inte 
 är särskilt brant på planeten: höjden mellan två
-intilliggande rutor (rutor som delar en kant) kan skilja 
+intilliggande rutor (rutor som delar en kant) kan inte skilja 
 med mer än ett. 
 
 Nu behöver forskarna din hjälp för att få ut så mycket information
