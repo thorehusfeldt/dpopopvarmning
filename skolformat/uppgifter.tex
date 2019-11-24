@@ -59,12 +59,7 @@ med att lämna in den korrekta versionen av ditt program.
 
 \specialsection*{Uppgift 1 -- Öar}
 
-%\begin{figure}[!h]
-%  \centering
-%      \includegraphics[width=0.6\textwidth]{kuber1.eps}
-%\end{figure}
-
-2020 års International Olympiad in Informatics (IOI) kommer att avgöras i Singapore, ett mycket litet land som består av massor av öar. På en av utflykterna på IOI ska de $N$ deltagarna ($1\le N \le 10000$) besöka dessa öar. Men deltagarna går och tänker på hur de ska implementera Fibonacci-heapar, så en efter en går vilse och hittar inte tillbaka.
+2020 års International Olympiad in Informatics (IOI) kommer att avgöras i Singapore, ett till ytan litet land som består av massor av öar. På en av utflykterna på IOI ska de $N$ deltagarna ($1\le N \le 10000$) besöka dessa öar. Men deltagarna går och tänker på hur de ska implementera Fibonacci-heapar, så en efter en går vilse och hittar inte tillbaka.
 
 På första ön försvinner en deltagare, på andra ön försvinner ytterligare en deltagare. På var och en av de följande öarna försvinner lika många deltagare som sammanlagt försvann på de två senaste öarna (om inte deltagarna är slut innan dess).
 
@@ -73,15 +68,15 @@ På vilken ö försvinner den sista deltagaren?
 \fe{Körningsexempel 1}
 
 \begin{verbatim}
-Antal deltagare ? 7
-Svar: 4
+Antal deltagare ? 12
+Svar: 5
 \end{verbatim}
 
 \fe{Körningsexempel 2}
 
 \begin{verbatim}
-Antal deltagare ? 8
-Svar: 5
+Antal deltagare ? 13
+Svar: 6
 \end{verbatim}
 
 \fe{Körningsexempel 3}
@@ -91,8 +86,12 @@ Antal deltagare ? 32
 Svar: 7
 \end{verbatim}
 
-
-TODO: Figur
+\vspace{1cm}
+\begin{figure}[!h]
+  \centering
+      \includegraphics[width=1.0\textwidth]{oarfig.eps}
+      \caption{Figuren visar situationen i det första exemplet när den sista (tolfte) deltagaren försvunnit på ö nummer 5.}
+\end{figure}
 
 \newpage
 \specialsection*{Uppgift 2 -- Tebryggning}
@@ -283,12 +282,12 @@ Rad 4 ? ....2
 
 När nästa planet upptäcktes (planet Y) hade mätmetoderna förbättrats så att höjden kunde bestämmas för alla rutor. Till allas glädje visade det sig att denna planet har perfekt klimat för skidåkning (som du säkert förstår finns det inte längre någon snö på jorden vid det här laget). Skriv ett program som beräknar den längsta skidbacke som kan byggas på planet Y.
 
-Kravet på en skidbacke är att det ska vara en sammanhängande sekvens av rutor där varje par av rutor gränsar till varandra antingen via en gemensam sida eller ett gemensamt hörn, och där varje ruta i sekvensen inte har högre höjd än den föregående (det är alltså i princip tillåtet att alla rutor i skidbacken har samma höjd). Samma ruta får inte användas flera gånger men skidbacken skulle  ändå kunna korsa sig själv genom ett hörn.
+Kravet på en skidbacke är att det ska vara en sammanhängande sekvens av rutor där varje par av rutor gränsar till varandra antingen via en gemensam sida eller ett gemensamt hörn (se figurer nedan), och där varje ruta i sekvensen inte har högre höjd än den föregående. Det är alltså i princip tillåtet att alla rutor i skidbacken har samma höjd. Samma ruta får inte användas flera gånger men skidbacken skulle ändå kunna korsa sig själv genom ett hörn som i det andra exemplet nedan.
 
 Liksom i föregående uppgift ska programmet fråga efter antalet rader $N$ och kolumner $M$ i rutnätet ($1\leq N,M \leq 7$), och 
 sedan läsa in $N$ rader med $M$ tecken på varje.
 Det $j$:te tecknet på rad $i$ är en siffra mellan
-0 och 9 som motsvarar höjden på rutan. På den här planeten finns inga begränsningar i branthet, men däremot vet vi att det finns högst $7$ rutor i rutnätet som har samma höjd. 
+0 och 9 som motsvarar höjden på rutan. På den här planeten finns inga begränsningar i branthet, men däremot vet vi att det aldrig finns mer än $7$ rutor i rutnätet som har en viss höjd.
 
 Programmet ska skriva ut det största antalet rutor som kan ingå i en godkänd skidbacke.
 
@@ -298,6 +297,7 @@ För testfall värda ytterligare $1$ poäng gäller att inga angränsande rutor 
 För testfall värda ytterligare $1$ poäng gäller att varje ruta gränsar till högst två rutor med samma höjd som sig själv.\\
 
 
+\begin{multicols}{2}
 \fe{Körningsexempel 1}
 \begin{verbatim}
 Antal rader ? 3
@@ -310,7 +310,6 @@ Svar: 8
 \end{verbatim}
 
 
-TODO: Förklaring: 43332110 rita figur.
 
 \fe{Körningsexempel 2}
 \begin{verbatim}
@@ -322,6 +321,10 @@ Rad 2 ? 25
 Svar: 4
 \end{verbatim}
 
+\vfill\columnbreak
+\includegraphics[width=0.3\textwidth]{planetbackefig.eps}
+
+\end{multicols}
 
 
 \newpage
