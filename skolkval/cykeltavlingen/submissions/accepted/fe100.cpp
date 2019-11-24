@@ -42,5 +42,5 @@ int main() {
         if(bikesum<=l&&fastEnough) up = mid;
         else dn = mid;
     }
-    cout<<fixed<<setprecision(18)<<(dn+up)/2<<endl;
+    cout<<(dn+up)/2<<endl;
 }
