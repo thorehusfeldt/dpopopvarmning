@@ -30,10 +30,10 @@ int main() {
 		}
 	}
 	for(n=0;n<=9;n++) {
-		for(i=0;i<N;i++) for(j=0;j<N;j++) if(map[i][j]==n) T[i][j]=MLX(i,j,n);
+		for(i=0;i<N;i++) for(j=0;j<M;j++) if(map[i][j]==n) T[i][j]=MLX(i,j,n);
 	}
 	n=0;
-	for(i=0;i<N;i++) for(j=0;j<N;j++) n=MAX(n,T[i][j]);
+	for(i=0;i<N;i++) for(j=0;j<M;j++) n=MAX(n,T[i][j]);
 	printf("%d\n", n);
 	return 0;
 }

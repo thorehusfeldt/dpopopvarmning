@@ -28,7 +28,7 @@ int main() {
 		}
 	}
 	n=0;
-	for(i=0;i<N;i++) for(j=0;j<N;j++) n=MAX(n,MLX(i,j,10));
+	for(i=0;i<N;i++) for(j=0;j<M;j++) n=MAX(n,MLX(i,j,10));
 	printf("%d\n", n);
 	return 0;
 }
