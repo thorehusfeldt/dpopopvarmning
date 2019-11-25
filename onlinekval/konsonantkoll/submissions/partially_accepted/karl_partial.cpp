@@ -14,7 +14,7 @@ int main() {
   string w;
   cin >> w;
 
-  for (char c : "bdfghjklmnpqrstvwx") removeTriple(w, c);
+  for (char c : "bcdfghjklmnpqrstvwxz") removeTriple(w, c);
   cout << w << endl;
 
   return 0;
