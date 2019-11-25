@@ -98,7 +98,7 @@ group group7 23
 limits nMax=$MAXN kMax=$MAXN qMax=1 special=none
 tc q1-01 gen_random n=4000 k=100 q=1 intervals=same
 tc q1-02 gen_random n=7000 k=1001 q=1 intervals=same
-tc q1-03 gen_random n=15000 k=10 q=1
+tc q1-03 gen_random n=15000 k=10 q=1 intervals=same
 tc q1-04 gen_random n=15000 k=3 q=1 intervals=same
 tc q1-05 gen_random n=15000 k=2 q=1 intervals=same
 tc q1-06 gen_random n=15000 k=1 q=1 intervals=same
@@ -110,7 +110,7 @@ tc q1-11 gen_random n=20000 k=100 q=1 mode=double intervals=same x=5000
 tc q1-12 gen_random n=20000 k=10 q=1 mode=double intervals=same x=5000
 tc q1-13 gen_random n=20000 k=3 q=1 mode=double intervals=same x=5000
 tc q1-14 gen_random n=20000 k=1000 q=1 mode=double intervals=same x=0
-tc q1-15 gen_random n=20000 k=19999 q=1
+tc q1-15 gen_random n=20000 k=19999 q=1 intervals=same
 tc q1-16 gen_random n=$MAXN k=10 q=1 mode=double intervals=same x=$((MAXN/4))
 tc q1-17 gen_random n=$MAXN k=1000 q=1 mode=double intervals=same x=$((MAXN/4))
 tc q1-18 gen_random n=$MAXN k=50000 q=1 mode=double intervals=same x=$((MAXN/4))
@@ -118,6 +118,7 @@ tc q1-19 gen_random n=$MAXN k=$MAXN q=1 intervals=same
 tc q1-20 gen_random n=$MAXN k=1000 q=1 intervals=same
 tc q1-21 gen_random n=$MAXN k=1000 q=1 mode=manyzeros intervals=same x=$((MAXN/2))
 tc q1-22 gen_random n=$MAXN k=$((MAXN/10)) q=1 mode=smart intervals=same
+tc q1-23 gen_special q=1
 
 group group8 17
 limits nMax=$MAXN kMax=$MAXN qMax=$MAXQ special=none

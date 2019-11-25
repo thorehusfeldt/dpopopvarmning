@@ -3,6 +3,9 @@
 import sys
 import random
 
+default = {
+    "q": 5,
+}
 
 def cmdlinearg(name):
     for arg in sys.argv:
@@ -12,12 +15,18 @@ def cmdlinearg(name):
 
 def main():
     random.seed(int(sys.argv[-1]))
-    print("13 3 4")
+    q = int(cmdlinearg("q"))
+    print("13 3 " + str(q))
     print("0 1 1 2 0 2 1 1 0 1 2 1 0")
-    print("1 5")
-    print("5 9")
-    print("9 13")
-    print("4 4")
+    queries = ["1 13", "1 5", "5 9", "9 13", "4 4"]
+    for i in range(0,q):
+        if i >= len(queries):
+            l = random.randint(1,n)
+            r = random.randint(1,n)
+            print(min(l,r), max(l,r))
+        else:
+            print(queries[i])
+
     
 if __name__ == "__main__":
     main()
