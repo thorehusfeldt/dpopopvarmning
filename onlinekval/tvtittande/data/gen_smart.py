@@ -17,7 +17,9 @@ ans = cmdlinearg('ans')
 days = int(cmdlinearg('days'))
 maxcsum = int(cmdlinearg('maxcsum', 100000))
 f = float(cmdlinearg('f', 0.1))
+concentrate = int(cmdlinearg('concentrate', 0))
 assert 0 <= f <= 1
+assert concentrate == 0 or concentrate == 1
 assert n <= days
 assert maxcsum >= n
 assert ans == 'Ja' or ans == 'Nej'
@@ -102,9 +104,18 @@ for i in range(n):
     if(usehours[i] != 0):
         d[i] = 1
         t+=1
-for i in range(k-t):
-    p = random.randint(0,len(nonzero)-1)
-    d[nonzero[p]] += 1
+if concentrate == 0:
+    for i in range(k-t):
+        p = random.randint(0,len(nonzero)-1)
+        d[nonzero[p]] += 1
+else:
+    p = -1
+    pl = -1
+    for i in nonzero:
+        if(usehours[i] > pl):
+            pl = usehours[i]
+            p = i
+    d[p] += k-t
 
 extra = 0
 for i in range(n):
