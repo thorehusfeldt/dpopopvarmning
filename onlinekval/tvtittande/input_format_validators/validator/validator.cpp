@@ -18,7 +18,7 @@ void run() {
 	Endl();
 	long long csum = 0;
 	int prevday = 0;
-	vi w(k);
+	vector<int> w(k);
 	for(int i = 0; i < n; i++){
 		int d = Int(prevday+1, 100000);
 		prevday = d;
