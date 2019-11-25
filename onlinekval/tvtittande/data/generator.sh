@@ -11,12 +11,13 @@ samplegroup
 limits nMax=10 kMax=10
 sample 1
 sample 2
-#sample 3
+sample 3
 
 group group1 40
 limits nMax=50 kMax=50
 tc 1
 tc 2
+tc 3
 tc small-rand-1 gen_random n=1 k=1 days=1 maxlength=10 csum=1
 tc small-rand-2 gen_random n=1 k=1 days=1 maxlength=100000 csum=1
 tc small-rand-3 gen_random n=1 k=1 days=100000 maxlength=100000 csum=1
