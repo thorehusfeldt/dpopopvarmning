@@ -128,6 +128,7 @@ Svar: 4
 och två kannor med tredje tepåsen. Det ger $20+17$ koppar te, vilket
 räcker till de 36 deltagarna.
 
+\vspace{1cm}
 
 \fe{Körningsexempel 2}
 \begin{verbatim}
@@ -150,9 +151,9 @@ Det ger $54+30+16$ koppar te, vilket räcker till de 100  deltagarna.
 \newpage
 \specialsection*{Uppgift 3 -- Zoo}
 
-Esmeralda bygger ett zoo med $N$ burar i en lång rad. Varje bur ska fyllas med ett djur. Hon har $K$ olika djurarter att välja på, som vi kallar A, B, C, o.s.v. Hon kan ha flera burar med samma djurart, men inte precis intill varandra. Dessutom vet hon att vissa djur inte trivs bra ihop. Närmare bestämt så finns det $M$ stycken ''bråkiga grupper'' av djurarter, och Esmeralda vill inte placera två djur ur samma bråkiga grupp i burar intill varandra. På hur många sätt kan Esmeralda placera ut djur i burarna?
+Esmeralda bygger ett zoo med $N$ burar i en lång rad. Varje bur ska fyllas med ett djur. Hon har $K$ olika djurarter att välja på, som vi kallar A, B, C, o.s.v. Hon kan ha flera burar med samma djurart, men inte precis intill varandra. Dessutom vet hon att vissa djur inte trivs bra ihop. Närmare bestämt så finns det $M$ stycken ``bråkiga grupper'' av djurarter, och Esmeralda vill inte placera två djur ur samma bråkiga grupp i burar intill varandra. På hur många sätt kan Esmeralda placera ut djur i burarna?
 
-Programmet ska läsa in tre heltal: antalet burar $N$, antalet djurarter $K$ och antalet bråkiga grupper $M$. Därefter ska programmet läsa in $M$ stycken strängar som var och en består av mellan $2$ och $K$ bokstäver: en bråkig grupp av djurarter som parvis inte tolererar varandra. Endast de $K$ första bokstäverna i alfabetet kan förekomma. Programmet ska skriva ut ett heltal, antal sätt Esmeralda kan placera ut djur på. För givna indata kommer svaret aldrig överstiga 2 miljarder.
+Programmet ska fråga efter antalet burar $N$, antalet djurarter $K$ och antalet bråkiga grupper $M$. Därefter ska programmet fråga efter $M$ stycken strängar som var och en består av mellan $2$ och $K$ bokstäver: en bråkig grupp av djurarter som parvis inte tolererar varandra. Endast de $K$ första bokstäverna i alfabetet kan förekomma. Programmet ska skriva ut ett heltal, antal sätt Esmeralda kan placera ut djur på. För givna indata kommer svaret aldrig överstiga 2 miljarder.
 
 \fe{Poängsättning:}\\
 För testfall värda $1$ poäng gäller att $2\le N \le 10$, $\;\;2\le K \le 5$, och $M=0$. \\
@@ -280,14 +281,14 @@ Rad 4 ? ....2
 \newpage
 \specialsection*{Uppgift 5 -- Planetbacke}
 
-När nästa planet upptäcktes (planet Y) hade mätmetoderna förbättrats så att höjden kunde bestämmas för alla rutor. Till allas glädje visade det sig att denna planet har perfekt klimat för skidåkning (som du säkert förstår finns det inte längre någon snö på jorden vid det här laget). Skriv ett program som beräknar den längsta skidbacke som kan byggas på planet Y.
+När nästa planet upptäcks (planet Y) har mätmetoderna förbättrats så att höjden kan bestämmas för alla rutor. Till mångas glädje visar det sig att denna planet har perfekt klimat för skidåkning (som du säkert förstår finns det inte längre någon snö på jorden vid det här laget). Skriv ett program som beräknar den längsta skidbacke som kan byggas på planet Y.
 
-Kravet på en skidbacke är att det ska vara en sammanhängande sekvens av rutor där varje par av rutor gränsar till varandra antingen via en gemensam sida eller ett gemensamt hörn (se figurer nedan), och där varje ruta i sekvensen inte har högre höjd än den föregående. Det är alltså i princip tillåtet att alla rutor i skidbacken har samma höjd. Samma ruta får inte användas flera gånger men skidbacken skulle ändå kunna korsa sig själv genom ett hörn som i det andra exemplet nedan.
+Kravet på en skidbacke är att det ska vara en sammanhängande sekvens av rutor där varje par av rutor gränsar till varandra antingen via en gemensam sida eller ett gemensamt hörn (se figurerna nedan), och där varje ruta i sekvensen inte har högre höjd än den föregående. Det är alltså i princip tillåtet att alla rutor i skidbacken har samma höjd. Samma ruta får inte användas flera gånger men skidbacken skulle ändå kunna korsa sig själv genom ett hörn som i det andra exemplet nedan.
 
-Liksom i föregående uppgift ska programmet fråga efter antalet rader $N$ och kolumner $M$ i rutnätet ($1\leq N,M \leq 7$), och 
+Precis som i föregående uppgift ska programmet fråga efter antalet rader $N$ och kolumner $M$ i rutnätet ($1\leq N,M \leq 7$), och 
 sedan läsa in $N$ rader med $M$ tecken på varje.
 Det $j$:te tecknet på rad $i$ är en siffra mellan
-0 och 9 som motsvarar höjden på rutan. På den här planeten finns inga begränsningar i branthet, men däremot vet vi att det aldrig finns mer än $7$ rutor i rutnätet som har en viss höjd.
+0 och 9 som motsvarar höjden för rutan. På den här planeten finns inga begränsningar i branthet, men däremot vet vi att det aldrig finns fler än $7$ rutor i rutnätet som har samma höjd.
 
 Programmet ska skriva ut det största antalet rutor som kan ingå i en godkänd skidbacke.
 
@@ -328,7 +329,7 @@ Svar: 4
 
 
 \newpage
-\specialsection*{Uppgift 6 -- Cykeltävlingen}
+\specialsection*{Uppgift 6 -- Cykeltävling}
 
 Du och dina kompisar har bildat ett lag som ska delta i en löpartävling. Tävlingen har lite speciella regler.
 Man får nämligen använda en cykel, men bara en per lag. De $N$ medlemmarna i laget kan alltså turas om att använda cykeln, och kan
@@ -338,11 +339,11 @@ Tiden för ett lag räknas när den sista medlemmen går i mål. Person nummer $
 konstant hastighet $s_i$ meter/sekund, och cyklar med en konstant hastighet $c_i$ meter/sekund. Loppet är $L$ meter långt.
 Hur snabbt kan ni ta er i mål, om ni använder cykeln optimalt?
 
-Programmet ska fråga om antalet lagmedlemmar $N$ och loppets längd $L$ (båda heltal som uppfyller $2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
+Programmet ska fråga efter antalet lagmedlemmar $N$ och loppets längd $L$ (båda heltal som uppfyller $2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
 Sedan ska programmet läsa in de två heltalen $s_i$ och $c_i$ för varje lagmedlem ($1 \leq s_i, c_i \leq 100$).
 
 Programmet ska skriva ut ett decimaltal: den minimala tiden som laget kan ta sig i mål på (i sekunder).
-Svaret ska skrivas ut med minst 2 decimaler.
+Svaret ska skrivas ut med minst 2 decimaler. {\em Använd datatypen double eller motsvarande i beräkningarna.}
 
 \fe{Poängsättning:}\\
 För testfall värda $1$ poäng gäller att $N=2$. \\
@@ -351,6 +352,7 @@ För testfall värda ytterligare $1$ poäng gäller att alla $s_i$ är samma och
 \begin{multicols}{2}
 \fe{Körningsexempel 1}
 \begin{verbatim}
+
 Antal i laget ? 3
 Längd ? 10
 Person 1, löphast   ? 1
@@ -360,7 +362,7 @@ Person 2, cykelhast ? 3
 Person 3, löphast   ? 3
 Person 3, cykelhast ? 1
 
-Svar: 4.666666667
+Svar: 4.6667
 \end{verbatim}
 \fe{Förklaring: } En lösning är att låta den första personen cykla de första $8$ meterna, och sen springa resten. Person nummer $2$
 kan då springa de första $8$ meterna och sen cykla sista biten. Person nummer $3$ springer hela vägen. Notera att person nummer $3$ har
@@ -379,7 +381,7 @@ Person 3, cykelhast ? 7
 Person 4, löphast   ? 14
 Person 4, cykelhast ? 1
 
-Svar: 839.416058394
+Svar: 839.4161
 \end{verbatim}
 \fe{Förklaring: } Laget består av en elitlöpare, en elitcyklist, en PO-arrangör, och en struts. Lösningen bygger på att låta PO-arrangören
 cykla en stor del av tiden.
