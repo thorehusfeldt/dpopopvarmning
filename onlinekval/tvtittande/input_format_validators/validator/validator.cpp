@@ -37,6 +37,6 @@ void run() {
 		Endl();
 	}
 	assert(csum <= 100000);
-	for(auto x : w) assert(w == 1);
+	for(auto x : w) assert(x == 1);
 	Eof();
 }
