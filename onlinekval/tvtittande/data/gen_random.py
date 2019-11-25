@@ -36,6 +36,24 @@ for i in range(csum-n):
     while p == -1 or c[p] == k:
         p = random.randint(0,n-1)
     c[p] += 1
+
+a = []
+for i in range(n): a.append([])
+for i in range(k):
+    p = -1
+    while(p == -1 or c[p] == len(a[p])):
+        p = random.randint(0, n-1)
+    a[p].append(i+1)
+
+for i in range(n):
+    for j in range(c[i]-len(a[i])):
+        p = -1
+        while(p == -1 or p in a[i]):
+            p = random.randint(1, k)
+        a[i].append(p)
+    random.shuffle(a[i])
+        
+
 for i in range(n):
     print(events[i], c[i], end=' ')
-    print(*random.sample(range(1, k+1), k=c[i]))
+    print(*a[i])
