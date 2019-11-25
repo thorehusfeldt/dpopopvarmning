@@ -8,6 +8,7 @@ PPATH=$(realpath ..)
 use_solution ng.cpp
 
 compile gen_random.py
+compile gen_special.py
 
 MAXN=200000
 MAXQ=100000
@@ -32,6 +33,7 @@ tc tiny-09 gen_random n=1 k=1 q=1
 tc tiny-10 gen_random n=15 k=1 q=1
 tc tiny-11 gen_random n=15 k=5 q=15 mode=smart
 tc tiny-12 gen_random n=15 k=3 q=15 intervals=same
+tc tiny-13 gen_special
 
 group group2 11
 limits nMax=100 kMax=100 qMax=100 special=none
