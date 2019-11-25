@@ -18,6 +18,7 @@ void run() {
 	Endl();
 	long long csum = 0;
 	int prevday = 0;
+	vi w(k);
 	for(int i = 0; i < n; i++){
 		int d = Int(prevday+1, 100000);
 		prevday = d;
@@ -29,10 +30,13 @@ void run() {
 		for(int j = 0; j < c; j++){
 			int x = Int(1, k);
 			serier.insert(x);
+			w[x-1] = 1;
 			if(j != c-1) Space();
 		}
 		assert(sz(serier) == c);
 		Endl();
 	}
 	assert(csum <= 100000);
+	for(auto x : w) assert(w == 1);
+	Eof();
 }
