@@ -6,7 +6,6 @@ use_solution gustav.cpp
 
 compile gen_random.py
 compile gen_smart.py
-compile gen_smart2.py
 
 samplegroup
 limits nMax=10 kMax=10
