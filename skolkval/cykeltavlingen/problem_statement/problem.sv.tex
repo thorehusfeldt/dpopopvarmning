@@ -7,18 +7,17 @@ Tiden för ett lag räknas när den sista medlemmen går i mål. I ert lag är n
 konstant hastighet $s_i$ meter/sekund, och cyklar med en konstant hastighet $c_i$ meter/sekund. Loppet är $L$ meter långt.
 Hur snabbt kan ni ta er i mål, om ni använder cykeln optimalt?
 
-
 \section*{Indata}
-På första raden står två heltal $N$ och $L$ ($2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
-På de $N$ följande raderna står två heltal $s_i$ och $c_i$ ($1 \leq s_i, c_i \leq 100$).
+På första raden står de två heltalen $N$ och $L$ ($2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
+På de $N$ följande raderna står två heltal vardera: $s_i$ och $c_i$ ($1 \leq s_i, c_i \leq 100$).
 
 \section*{Utdata}
 Programmet ska skriva ut ett flyttal: den minimala tiden som laget kan ta sig i mål (i sekunder).
-Svaret anses korrekt om det har ett relativt eller absolut fel av högst $10^{-6}$.
+Svaret anses korrekt om det skiljer sig från det rätta svaret med högst $10^{-2}$.
 
 \section*{Poängsättning}
 För testfall värda $20$ poäng gäller att $N=2$. \\
-För testfall värda $20$ poäng gäller att alla $s_i$ är samma och alla $c_i$ är samma.\\
+För testfall värda $20$ poäng gäller att alla $s_i$ är samma och alla $c_i$ är samma.
 
 \section*{Exempelförklaring}
 I det första exemplet är en lösning att låta den första personen cykla de första $8$ meterna, och sen springa resten. Person nummer $2$

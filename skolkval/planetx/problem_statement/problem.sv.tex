@@ -1,6 +1,6 @@
 \problemname{Planet X}
-Året är 2109 och en grupp forskare har just upptäckt "Planet X", 
-en tidigare oupptäckt planet här i vårt egna solsystem,
+Året är 2109 och en grupp forskare har just upptäckt ``Planet X'', 
+en tidigare okänd planet här i vårt egna solsystem,
 bortom Plutos omloppsbana. Genast skickar forskargruppen ut
 en sond för att göra mätningar, och kort därefter får de tillbaka mätdata.
 
@@ -9,15 +9,14 @@ Vi representerar här ytan som ett $N \times M$ rutnät, där varje ruta
 har en höjd mellan 0 och 9.
 
 Ett mätinstrument på sonden har lyckats mäta den specifika höjden
-på vissa rutor. Utifrån den kemiska sammansättningen i ytan vet vi att det inte 
+på vissa, men inte alla, rutor. Utifrån den kemiska sammansättningen i ytan vet vi att det inte 
 är särskilt brant på planeten: höjden mellan två
 intilliggande rutor (rutor som delar en kant) aldrig kan skilja 
 med mer än ett. 
 
 Nu behöver forskarna din hjälp för att få ut så mycket information
 från denna data som möjligt. Närmare bestämt vill de att du givet höjden
-på några av rutorna hittar höjden på alla andra rutor där höjden
-går att bestämma exakt.
+på några av rutorna hittar höjden på alla andra rutor som går att bestämma entydigt.
 
 \section*{Indata}
 På den första raden står två heltal $1 \le N,M \le 10$, 
@@ -33,6 +32,6 @@ rutnätet som det ser ut efter att
 korrekta höjder är ifyllda på alla rutor där höjden går att bestämma.
 
 \section*{Poängsättning}
-För testfall värda $1$ poäng gäller att $N=1$. \\
-För testfall värda $1$ poäng gäller att $N,M \leq 3$. \\
-För de resterande testfallen (värda $3$ poäng) gäller att $1\leq N,M \leq 10$.
+För testfall värda $20$ poäng gäller att $N=1$. \\
+För testfall värda $20$ poäng gäller att $N,M \leq 3$. \\
+För de resterande testfallen (värda $60$ poäng) gäller att $1\leq N,M \leq 10$.
