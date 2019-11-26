@@ -20,10 +20,10 @@ void run() {
 	int prevday = 0;
 	vector<int> w(k);
 	for(int i = 0; i < n; i++){
-		int d = Int(prevday+1, 100000);
+		int d = Int(prevday+1, 200000);
 		prevday = d;
 		Space();
-		int c = Int(1, 100000);
+		int c = Int(1, 200000);
 		csum += c;
 		Space();
 		set<int> serier;
@@ -36,7 +36,7 @@ void run() {
 		assert(sz(serier) == c);
 		Endl();
 	}
-	assert(csum <= 100000);
+	assert(csum <= 200000);
 	for(auto x : w) assert(x == 1);
 	Eof();
 }

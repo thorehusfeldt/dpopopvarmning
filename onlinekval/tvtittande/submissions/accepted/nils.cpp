@@ -3,11 +3,11 @@ using namespace std;
 
 int n,k;
 
-int L[100001] = {0};
-int kalas[1000011] = {0};
-int earliest[100001] = {0};
+int L[200001] = {0};
+int kalas[2000011] = {0};
+int earliest[200001] = {0};
 
-vector<vector<int> > C(100001, vector<int>());
+vector<vector<int> > C(200001, vector<int>());
 
 bool comp(int i, int j){
     return earliest[i] < earliest[j];
@@ -42,7 +42,7 @@ int main() {
     sort(ind.begin(), ind.end(), comp);
     bool fail = 0;
     int current = 0;
-    for(int t = 0; t < 1000011; t++){
+    for(int t = 0; t < 2000011; t++){
         if(current == k)break;
         if(kalas[t] == 0){
             L[ind[current]]--;

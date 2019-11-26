@@ -15,7 +15,7 @@ n = int(cmdlinearg('n'))
 k = int(cmdlinearg('k'))
 ans = cmdlinearg('ans')
 days = int(cmdlinearg('days'))
-maxcsum = int(cmdlinearg('maxcsum', 100000))
+maxcsum = int(cmdlinearg('maxcsum', 200000))
 f = float(cmdlinearg('f', 0.1))
 concentrate = int(cmdlinearg('concentrate', 0))
 assert 0 <= f <= 1
