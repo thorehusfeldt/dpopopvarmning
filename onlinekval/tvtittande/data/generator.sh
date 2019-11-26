@@ -46,11 +46,11 @@ tc small-smart-12 gen_smart n=50 k=10 days=50 ans=Nej
 tc small-smart-13 gen_smart n=50 k=15 days=53 ans=Ja
 tc small-smart-14 gen_smart n=50 k=15 days=53 ans=Nej
 tc small-smart-15 gen_smart n=10 k=50 days=1000 ans=Ja
-tc small-smart-16 gen_smart n=50 k=50 days=100000 ans=Nej f=0
-tc small-smart-17 gen_smart n=50 k=50 days=100000 ans=Ja f=0.5
-tc small-smart-18 gen_smart n=50 k=50 days=100000 ans=Ja f=0.03
-tc small-smart-19 gen_smart n=20 k=50 days=100000 ans=Ja concentrated=1
-tc small-smart-20 gen_smart n=20 k=50 days=100000 ans=Nej concentrated=1
+tc small-smart-16 gen_smart n=50 k=50 days=200000 ans=Nej f=0
+tc small-smart-17 gen_smart n=50 k=50 days=200000 ans=Ja f=0.5
+tc small-smart-18 gen_smart n=50 k=50 days=200000 ans=Ja f=0.03
+tc small-smart-19 gen_smart n=20 k=50 days=200000 ans=Ja concentrated=1
+tc small-smart-20 gen_smart n=20 k=50 days=200000 ans=Nej concentrated=1
 tc small-smart-21 gen_smart n=50 k=1 days=100000 ans=Ja
 
 group group2 20
@@ -78,12 +78,12 @@ tc med-smart-10 gen_smart n=3000 k=3000 days=100000 ans=Ja f=0.01
 tc med-smart-11 gen_smart n=3000 k=3000 days=100000 ans=Nej f=0.01
 tc med-smart-12 gen_smart n=3000 k=3000 days=100000 ans=Ja f=0
 tc med-smart-13 gen_smart n=3000 k=3000 days=100000 ans=Nej f=0.001
-tc med-smart-14 gen_smart n=50 k=3000 days=100000 ans=Ja concentrated=1
-tc med-smart-15 gen_smart n=200 k=3000 days=100000 ans=Ja f=0.003
-tc med-smart-16 gen_smart n=3000 k=3000 days=100000 ans=Ja f=0.01 concentrated=1
-tc med-smart-17 gen_smart n=3000 k=3000 days=100000 ans=Nej f=0.01 concentrated=1
-tc med-smart-18 gen_smart n=3000 k=100 days=100000 ans=Ja f=0.003
-tc med-smart-19 gen_smart n=3000 k=100 days=100000 ans=Nej f=0.01
+tc med-smart-14 gen_smart n=50 k=3000 days=200000 ans=Ja concentrated=1
+tc med-smart-15 gen_smart n=200 k=3000 days=200000 ans=Ja f=0.003
+tc med-smart-16 gen_smart n=3000 k=3000 days=200000 ans=Ja f=0.01 concentrated=1
+tc med-smart-17 gen_smart n=3000 k=3000 days=200000 ans=Nej f=0.01 concentrated=1
+tc med-smart-18 gen_smart n=3000 k=100 days=200000 ans=Ja f=0.003
+tc med-smart-19 gen_smart n=3000 k=100 days=200000 ans=Nej f=0.01
 
 group group3 40
 limits nMax=200000 kMax=200000
