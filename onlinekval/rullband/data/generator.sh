@@ -8,6 +8,7 @@ PPATH=$(realpath ..)
 use_solution fe.cpp
 
 compile gen_random.py
+compile gen_antiquad.py
 
 MAXN=200000
 MAXM=200000
@@ -61,6 +62,8 @@ tc g3-09 gen_random n=200000 m=200000 onlyForward=True
 tc g3-10 gen_random n=200000 m=200000 onlyForward=True
 tc g3-11 gen_random n=200000 m=200000 onlyForward=True
 tc g3-12 gen_random n=200000 m=200000 onlyForward=True
+tc g3-13 gen_antiquad n=200000 m=200000
+tc g3-14 gen_antiquad n=200000 m=200000
 
 group group4 15
 limits nMax=1000 mMax=1000 onlyForward=0
