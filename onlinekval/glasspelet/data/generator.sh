@@ -9,6 +9,7 @@ use_solution ng.cpp
 
 compile gen_random.py
 compile gen_special.py
+compile gen_cases.py
 
 MAXN=200000
 MAXQ=100000
@@ -119,6 +120,10 @@ tc q1-20 gen_random n=$MAXN k=1000 q=1 intervals=same
 tc q1-21 gen_random n=$MAXN k=1000 q=1 mode=manyzeros intervals=same x=$((MAXN/2))
 tc q1-22 gen_random n=$MAXN k=$((MAXN/10)) q=1 mode=smart intervals=same
 tc q1-23 gen_special q=1
+tc q1-24 gen_cases n=50000 left=0 right=0
+tc q1-25 gen_cases n=50000 left=0 right=1
+tc q1-26 gen_cases n=50000 left=1 right=0
+tc q1-27 gen_cases n=50000 left=1 right=1
 
 group group8 17
 limits nMax=$MAXN kMax=$MAXN qMax=$MAXQ special=none
