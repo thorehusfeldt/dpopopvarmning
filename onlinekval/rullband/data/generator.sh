@@ -9,8 +9,8 @@ use_solution fe.cpp
 
 compile gen_random.py
 
-MAXN=100000
-MAXM=100000
+MAXN=200000
+MAXM=200000
 
 samplegroup
 limits nMax=$MAXN mMax=$MAXM onlyForward=0
@@ -52,15 +52,15 @@ limits nMax=$MAXN mMax=$MAXM onlyForward=1
 include_group group2
 tc g3-02 gen_random n=2000 m=10000 onlyForward=True
 tc g3-03 gen_random n=10000 m=23451 onlyForward=True
-tc g3-04 gen_random n=10 m=100000 onlyForward=True
-tc g3-05 gen_random n=100 m=100000 onlyForward=True
-tc g3-06 gen_random n=1000 m=100000 onlyForward=True
-tc g3-07 gen_random n=5000 m=100000 onlyForward=True
-tc g3-08 gen_random n=40000 m=100000 onlyForward=True
-tc g3-09 gen_random n=100000 m=100000 onlyForward=True
-tc g3-10 gen_random n=100000 m=100000 onlyForward=True
-tc g3-11 gen_random n=100000 m=100000 onlyForward=True
-tc g3-12 gen_random n=100000 m=100000 onlyForward=True
+tc g3-04 gen_random n=10 m=200000 onlyForward=True
+tc g3-05 gen_random n=100 m=200000 onlyForward=True
+tc g3-06 gen_random n=2000 m=200000 onlyForward=True
+tc g3-07 gen_random n=10000 m=200000 onlyForward=True
+tc g3-08 gen_random n=80000 m=200000 onlyForward=True
+tc g3-09 gen_random n=200000 m=200000 onlyForward=True
+tc g3-10 gen_random n=200000 m=200000 onlyForward=True
+tc g3-11 gen_random n=200000 m=200000 onlyForward=True
+tc g3-12 gen_random n=200000 m=200000 onlyForward=True
 
 group group4 15
 limits nMax=1000 mMax=1000 onlyForward=0
@@ -85,12 +85,12 @@ include_group group3
 include_group group4
 tc g5-02 gen_random n=2000 m=10000 onlyForward=False
 tc g5-03 gen_random n=10000 m=23451 onlyForward=False
-tc g5-04 gen_random n=10 m=100000 onlyForward=False
-tc g5-05 gen_random n=100 m=100000 onlyForward=False
-tc g5-06 gen_random n=1000 m=100000 onlyForward=False
-tc g5-07 gen_random n=5000 m=100000 onlyForward=False
-tc g5-08 gen_random n=40000 m=100000 onlyForward=False
-tc g5-09 gen_random n=100000 m=100000 onlyForward=False
-tc g5-10 gen_random n=100000 m=100000 onlyForward=False
-tc g5-11 gen_random n=100000 m=100000 onlyForward=False
-tc g5-12 gen_random n=100000 m=100000 onlyForward=False
+tc g5-04 gen_random n=10 m=200000 onlyForward=False
+tc g5-05 gen_random n=100 m=200000 onlyForward=False
+tc g5-06 gen_random n=2000 m=200000 onlyForward=False
+tc g5-07 gen_random n=10000 m=200000 onlyForward=False
+tc g5-08 gen_random n=80000 m=200000 onlyForward=False
+tc g5-09 gen_random n=200000 m=200000 onlyForward=False
+tc g5-10 gen_random n=200000 m=200000 onlyForward=False
+tc g5-11 gen_random n=200000 m=200000 onlyForward=False
+tc g5-12 gen_random n=200000 m=200000 onlyForward=False
