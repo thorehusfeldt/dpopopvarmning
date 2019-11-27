@@ -73,7 +73,7 @@ int solveFrom(vector<vector<int>>& tree, int node, int par) {
 void run(){
     int restr = Arg("restr", 0);
     int rooted = Arg("rooted", 0);
-    int n = Int(1,Arg("n"));
+    int n = Int(2,Arg("n"));
     Endl();
     vector<vector<int>> tree;
     UF uf(n);
@@ -81,12 +81,12 @@ void run(){
     set<pair<int, int>> seenEdges;
     rep(i,0,n){
         vector<int> branches;
-        int m = Int(1,n);
+        int m = Int(1, n-1);
         Space();
         ms += m;
         if (restr == 2) assert(m <= 2); //assert group 1
         if (restr == 3) assert(m <= 3); //assert group 2
-        vector<int> a = SpacedInts(m, 0, n);
+        vector<int> a = SpacedInts(m, 0, n - 1);
         rep(j,0,m){
             assert(a[j] != i);
             int e1 = max(a[j], i), e2 = min(a[j], i);
