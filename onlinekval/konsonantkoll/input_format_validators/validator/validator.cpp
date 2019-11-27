@@ -14,6 +14,7 @@ void run() {
     Eof();
 
     // String length
+    assert(in.size() >= 1);
     assert(in.size() <= maxLength);
 
     // Spaces
@@ -23,26 +24,24 @@ void run() {
     // Only a-z and space
     for (char c : in) assert((c >= 'a' && c <= 'z') || c == ' ');
 
-    // Max repeated
-    int maxCount = 0;
+    // No spaces at end
+    assert(in[0] != ' ');
+    assert(in[in.size() - 1] != ' ');
+
+    // Max repeated spaces/consonants
     char prev = -1;
     int count = 0;
     for (char c : in) {
-        if (c == prev)
-            count++;
-        else {
-            prev = -1;
-            maxCount = max(count, maxCount);
-            if (isConsonant(c)) {
-                prev = c;
-                count = 1;
-            } else {
-                prev = -1;
-                count = 0;
-            }
+        if (c != prev) {
+            prev = c;
+            count = 0;
+        }
+        count++;
+        if (isConsonant(c)) {
+            assert(count <= maxRepeated);
+        }
+        if (c == ' ') {
+            assert(count <= 1);
         }
     }
-    maxCount = max(count, maxCount);
-    assert(maxCount <= maxRepeated);
 }
-
