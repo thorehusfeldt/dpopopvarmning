@@ -13,7 +13,7 @@ sample 1
 sample 2
 sample 3
 
-group small 20
+group group1 20
 limits maxN=100 maxM=100 maxT=100
 include_group sample
 tc small-spec-1 gen_random maxN=1 maxM=100 maxT=100
@@ -26,8 +26,8 @@ tc small-rand-4 gen_random minN=50 maxN=100 maxM=n maxT=100
 tc small-rand-5 gen_random minN=50 maxN=100 maxM=n maxT=100
 tc small-rand-6 gen_random minN=50 maxN=100 maxM=n maxT=100
 
-group medium 30
-include_group small
+group group2 30
+include_group group1
 limits maxN=1000 maxM=1000 maxT=1000
 tc med-rand-1 gen_random minN=500 maxN=1000 minM=500 maxM=1000 minT=500 maxT=1000
 tc med-rand-2 gen_random minN=500 maxN=1000 minM=500 maxM=1000 minT=500 maxT=1000
@@ -36,8 +36,8 @@ tc med-rand-4 gen_random minN=500 maxN=1000 maxM=n minT=500 maxT=1000
 tc med-rand-5 gen_random minN=500 maxN=1000 maxM=n minT=500 maxT=1000
 tc med-rand-6 gen_random minN=500 maxN=1000 maxM=n minT=500 maxT=1000
 
-group bigt 25
-include_group medium
+group group3 25
+include_group group2
 limits maxN=1000 maxM=1000 maxT=1000000000
 tc bigt-rand-1 gen_random minN=500 maxN=1000 minM=500 maxM=1000 minT=1000 maxT=1000000000
 tc bigt-rand-2 gen_random minN=500 maxN=1000 minM=500 maxM=1000 minT=1000 maxT=1000000000
@@ -47,8 +47,8 @@ tc bigt-rand-5 gen_random minN=500 maxN=1000 maxM=n minT=1000 maxT=1000000000
 tc bigt-rand-6 gen_random minN=500 maxN=1000 maxM=n minT=1000 maxT=1000000000
 tc bigt-rand-7 gen_random minN=900 maxN=1000 minM=900 maxM=1000 minT=100000000 maxT=1000000000
 
-group big 25
-include_group bigt
+group group4 25
+include_group group3
 limits maxN=200000 maxM=200000 maxT=1000000000
 tc big-rand-1 gen_random minN=1000 maxN=200000 minM=1000 maxM=200000 minT=1000 maxT=1000000000
 tc big-rand-2 gen_random minN=1000 maxN=200000 minM=1000 maxM=200000 minT=1000 maxT=1000000000
