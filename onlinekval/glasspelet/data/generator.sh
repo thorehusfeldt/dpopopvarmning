@@ -77,7 +77,7 @@ tc k1-03 gen_random n=$MAXN k=1 q=$MAXQ intervals=same
 tc k1-04 gen_random n=$((MAXN-1)) k=1 q=$MAXQ intervals=same
 
 group group5 7
-limits nMax=$MAXN kMax=2 qMax=$MAXQ special=none
+limits nMax=$MAXN kMax=2 qMax=$MAXQ special=ktwo
 tc k2-01 gen_random n=2 k=2 q=1
 tc k2-02 gen_random n=13 k=2 q=100
 tc k2-03 gen_random n=$MAXN k=2 q=$MAXQ
@@ -96,7 +96,7 @@ tc small_intervals-08 gen_random n=$MAXN k=$((MAXN-1)) q=$MAXQ mode=double inter
 tc small_intervals-09 gen_random n=$MAXN k=3 q=$MAXQ mode=manyzeros intervals=small x=$((MAXN/2))
 
 group group7 23
-limits nMax=$MAXN kMax=$MAXN qMax=1 special=none
+limits nMax=$MAXN kMax=$MAXN qMax=1 special=full
 tc q1-01 gen_random n=4000 k=100 q=1 intervals=same
 tc q1-02 gen_random n=7000 k=1001 q=1 intervals=same
 tc q1-03 gen_random n=15000 k=10 q=1 intervals=same
