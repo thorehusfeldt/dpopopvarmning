@@ -1,0 +1,20 @@
+name: Verify problems
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: problemtools/icpc
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Generate test cases and verify problems
+      run: ./verifyall
