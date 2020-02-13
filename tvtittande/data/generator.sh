@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. ../../../testdata_tools/gen.sh
+. ../../testdata_tools/gen.sh
 
 use_solution gustav.cpp
 

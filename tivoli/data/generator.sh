@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REQUIRE_SAMPLE_REUSE=0 # insufficient sample precision
-. ../../../testdata_tools/gen.sh
+. ../../testdata_tools/gen.sh
 
 use_solution sol_ld.cpp
 
