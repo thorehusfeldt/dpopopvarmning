@@ -2,22 +2,22 @@
 
 \illustration{.3}{image}{Singapore Flyer\\© CEphoto, Uwe Aranas}
 
-Efter at have fulgt en meget veloptimeret rute gennem flyvepladsen er dit hold endelig ankommet til IOI i Singapore.
+Dit hold er endelig ankommet til IOI i Singapore.
 Under den første udflugt får alle $N$ hold på IOI lov til at køre i det gigantiske pariserhjul Singapore Flyer.
 Pariserhjulet har $M$ vogne og skal bruge $M$ minutter for at dreje én omgang (med andre ord tager det 1~minut at flytte en vogn et skridt.)
 
 Nogle hold er meget mere interesserede i at køre pariserhjul end andre, og derfor har hvert hold bestemt i forvejen, hvor mange runder de vil køre.
-Idet af- og påstigning tager lang tid, er man også blevet enige om, at når et hold vel har sag sig i vognen, så bliver de siddende, indtil de har kørt alle deres runder.
-Det betyder, at når hjulet drejer en vogn ned til indgangen, og vognen indeholder et hold, som vil fortsætte med at køre, så kan det næste holde ikke stige på.
-Det næste hold bliver nødt til at vente på en tom vogn eller på et hold, som har kørt alle sine omgange og vil stige af.
+Idet af- og påstigning tager lang tid, er man også blevet enige om, at når et hold har sat sig i vognen, så bliver de siddende, indtil de har kørt alle deres runder.
+Det betyder, at når hjulet drejer en vogn ned til indgangen, og vognen indeholder et hold som vil fortsætte med at køre, så kan det næste holde ikke stige på.
+Det næste hold bliver nødt til at vente på en tom vogn, eller på et hold som har kørt alle sine omgange og vil stige af.
 
 
 Alle hold står lige nu i kø foran pariserhjulet, og det svenske hold vil vide, hvor lang tid der går, inden alle har kørt.
 
 \section*{Indlæsning}
 Første linje indeholder heltallene $N$ og $M$, adskilte af mellemrum, antallet af hold og antallet af vogne i pariserhjulet.
-Anden række indeholder $N$ heltal $T_1$, $\ldots$, $T_N$, adskilte af mellemrum, hvor $T_i$ er antallet af omgange, som hold  nummer~$i$ vil køre.
-Holdende står i køorden, og $T_1$ er første hold i køen.
+Anden række indeholder $N$ heltal $T_1$, $\ldots$, $T_N$, adskilte af mellemrum, hvor $T_i$ er antallet af omgange som hold  nummer~$i$ vil køre.
+Holdene står i køorden, og $T_1$ er første hold i køen.
 
 \section*{Udskrift}
 Udskriv en linje med et enkelt heltal, antallet af minutter, det tager for at alle hold har kørt.
@@ -47,5 +47,5 @@ Gruppe & Point & Begrænsninger \\ \hline
 \end{figure}
 
 I eksempel~1 er der fire hold og tre vogne.
-De fire hold, som på billedet er vist som Sverige, Norge, Finland og Danmark, vil køre henholdsvis 2, 2, 1 og 1 omgang.
+De fire hold, som på billedet er vist som Sverige, Norge, Finland og Danmark vil køre henholdsvis 2, 2, 1 og 1 omgang.
 Læg mærke til, at det danske hold ikke kan stige på pariserhjulet ved tid $t=3$ eller $t=4$, fordi hhv. det svenske eller norske hold allerede sidder i nederste vogn og vil køre en omgang mere.
