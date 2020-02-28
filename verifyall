@@ -13,23 +13,26 @@ h2="--------------------------------------------------"
 res=0
 gen_fails=""
 ver_fails=""
-for f in */*/generator.sh; do
-  d=$(dirname "$f")
-  p=$(dirname "$d")
+for f in */problem.yaml; do
+  p=$(dirname "$f")
   echo "$h1"
   echo "Problem: $p"
   echo "$h1"
   echo
-  echo "$h2"
-  echo "$p: Test case generation"
-  echo "$h2"
-  echo
-  (cd "$d" && ./generator.sh)
-  gen_status=$?
-  res=$((res + gen_status))
-  if [ "$gen_status" -ne 0 ]; then
-	gen_fails="${gen_fails}${p}\n"
+  cd "$p"
+  if [ -f data/generator.sh ]; then
+    echo "$h2"
+    echo "$p: Test case generation"
+    echo "$h2"
+    echo
+    (cd data && ./generator.sh)
+    gen_status=$?
+    res=$((res + gen_status))
+    if [ "$gen_status" -ne 0 ]; then
+  	  gen_fails="${gen_fails}${p}\n"
+    fi
   fi
+  cd ".."
   echo
   echo "$h2"
   echo "$p: Problem verification"
